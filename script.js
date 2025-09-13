@@ -1,6 +1,6 @@
 // 计算宝宝年龄
 function calculateBabyAge() {
-    const birthDate = new Date('2024-01-01');
+    const birthDate = new Date('2024-03-12');
     const today = new Date();
     
     // 计算天数
