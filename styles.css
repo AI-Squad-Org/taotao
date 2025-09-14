@@ -268,6 +268,60 @@ body {
     transform: scale(1.05);
 }
 
+/* 新功能导航样式 */
+.new-features {
+    padding: 4rem 0;
+    background: white;
+}
+
+.new-features h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #2d3748;
+    margin-bottom: 3rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid #e2e8f0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #667eea;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+}
+
+.feature-card h3 {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    color: #718096;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-top: 1rem;
+}
+
 /* 页脚 */
 .footer {
     background: #2d3748;
@@ -334,5 +388,219 @@ body {
     
     .photo-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* 宝宝护理指南页面特定样式 */
+.age-selector {
+    background: #f7fafc;
+    padding: 3rem 0;
+}
+
+.selector-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.selector-card h2 {
+    color: #4a5568;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.age-input-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+}
+
+.input-field {
+    text-align: left;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.input-field input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+.current-age-display {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #667eea;
+    background: #f0f4ff;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px dashed #667eea;
+}
+
+.care-guide {
+    padding: 4rem 0;
+}
+
+.guide-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.guide-header h2 {
+    font-size: 2.2rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.guide-header p {
+    font-size: 1.1rem;
+    color: #718096;
+}
+
+.guide-section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #667eea;
+}
+
+.guide-section h3 {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.care-list {
+    list-style: none;
+    padding: 0;
+}
+
+.care-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.care-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #48bb78;
+    font-weight: bold;
+}
+
+.care-list li:last-child {
+    border-bottom: none;
+}
+
+.quick-nav {
+    background: #f7fafc;
+    padding: 3rem 0;
+}
+
+.quick-nav h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 2rem;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nav-btn {
+    background: white;
+    border: 2px solid #e2e8f0;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-btn:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .age-input-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .nav-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .guide-section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .selector-card {
+        padding: 1.5rem;
+    }
+    
+    .guide-section h3 {
+        font-size: 1.2rem;
     }
 }
