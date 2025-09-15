@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生长发育曲线 - 宝宝成长记录</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>📈 生长发育曲线</h1>
+            <p>跟踪宝宝的身高体重发育情况</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- 数据输入表单 -->
+        <section class="data-input">
+            <div class="container">
+                <div class="input-card">
+                    <h2>记录生长发育数据</h2>
+                    <form id="growth-form" class="growth-form">
+                        <div class="form-group">
+                            <label for="record-date">记录日期：</label>
+                            <input type="date" id="record-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age-months">月龄：</label>
+                            <input type="number" id="age-months" min="0" max="36" required>
+                            <span>个月</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="height">身高：</label>
+                            <input type="number" id="height" step="0.1" min="40" max="120" required>
+                            <span>厘米</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">体重：</label>
+                            <input type="number" id="weight" step="0.01" min="2" max="25" required>
+                            <span>公斤</span>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-save"></i> 保存记录
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 生长曲线图表 -->
+        <section class="growth-charts">
+            <div class="container">
+                <div class="chart-card">
+                    <h2>身高发育曲线</h2>
+                    <canvas id="height-chart" width="400" height="200"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>体重发育曲线</h2>
+                    <canvas id="weight-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- 发育评估 -->
+        <section class="growth-assessment">
+            <div class="container">
+                <div class="assessment-card">
+                    <h2>发育评估</h2>
+                    <div id="assessment-result" class="assessment-result">
+                        <p>请添加数据以获取发育评估</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 宝宝成长记录系统</p>
+        </div>
+    </footer>
+
+    <script src="growth-chart.js"></script>
+</body>
+</html>
